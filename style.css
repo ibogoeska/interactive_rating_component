@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: #000;
+  height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #272f39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container,
+.thank-you-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__box {
+  max-width: 400px;
+  background: rgb(20, 21, 25);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 21, 25, 1) 0%,
+    rgba(17, 31, 42, 1) 80%
+  );
+  color: #fff;
+  padding: 30px;
+  border-radius: 30px;
+}
+.star-faIcon {
+  color: #f97716;
+}
+.container__text {
+  color: #49515a;
+  line-height: 25px;
+}
+.container__notes {
+  display: flex;
+  justify-content: space-around;
+}
+.container__notes--number {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+.container__notes--number:hover {
+  cursor: pointer;
+  background-color: #f97716;
+}
+
+.container__notes--number.selected {
+  background-color: #fff;
+  color: #272f39;
+}
+
+#submit-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 50px;
+  background-color: #f97716;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 5px;
+  border: none;
+}
+#submit-btn:hover {
+  background-color: #fff;
+  color: #272f39;
+  cursor: pointer;
+}
+
+.after-submit__img {
+  max-width: 150px;
+}
+.selected-text {
+  width: 60%;
+  background-color: #272f39;
+  color: #f97716;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}

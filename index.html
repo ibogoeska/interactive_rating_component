@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor Challenge | Interactive rating component</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google fonts link provided -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Including the custom css file -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Rating state start -->
+
+    <div class="container">
+      <div class="container__box">
+        <div class="star-faIcon mb-30 circle">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h1 class="mb-20">How did we do?</h1>
+        <p class="container__text mb-30">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="container__notes mb-30">
+          <div class="circle">
+            <button class="container__notes--number" data-rating="1">1</button>
+          </div>
+          <div class="circle">
+            <button class="container__notes--number" data-rating="2">2</button>
+          </div>
+          <div class="circle">
+            <button class="container__notes--number" data-rating="3">3</button>
+          </div>
+          <div class="circle">
+            <button class="container__notes--number" data-rating="4">4</button>
+          </div>
+          <div class="circle">
+            <button class="container__notes--number" data-rating="5">5</button>
+          </div>
+        </div>
+        <button type="submit" id="submit-btn">Submit</button>
+      </div>
+    </div>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="thank-you-container hidden">
+      <div class="container__box text-center d-flex">
+        <img
+          class="after-submit__img mb-30"
+          src="images/illustration-thank-you.svg"
+          alt="Small device for invoices"
+        />
+        <p class="selected-text mb-30">
+          You selected <span id="selected-rating"></span> out of 5
+        </p>
+        <h2 class="mb-30">Thank you!</h2>
+        <p class="container__text">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+    <!-- Thank you state end -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
