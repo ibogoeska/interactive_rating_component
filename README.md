@@ -1,6 +1,7 @@
 # Frontend Mentor - Interactive rating component solution
 
-This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). 
+I dearly recommend to everyone who is new in this area to practise doing small and even bigger projects on their page. 
 
 ## Table of contents
 
@@ -11,7 +12,6 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://github.com/ibogoeska/interactive_rating_component)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -50,32 +50,34 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+I have mostly done practise on what I have learned in the area from HTML and CSS from the Brainster Academy, although I needed to search and read more to find solutions in the process of creating the JavaScript file, which offers the users of this interactive component to rate their UX from 1-5, and dinamically show them their choice after clicking the Submit button. 
+You can see a snippet of the code used down below:
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+ let selectedRating = null;
+
+  ratingButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      ratingButtons.forEach((btn) => btn.classList.remove("selected"));
+
+      button.classList.add("selected");
+      selectedRating = button.getAttribute("data-rating");
+    });
+  });
+
+  submitButton.addEventListener("click", () => {
+    if (selectedRating) {
+      selectedRatingText.textContent = selectedRating;
+      ratingContainer.classList.add("hidden");
+      thankYouContainer.classList.remove("hidden");
+    } else {
+      alert("Please select a rating before submitting!");
+    }
 ```
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Website - [ibogoeska@github](https://github.com/ibogoeska)
+- Github - [ibogoeska](https://github.com/ibogoeska)
 - Frontend Mentor - [@ibogoeska](https://www.frontendmentor.io/profile/ibogoeska)
+- LinkedIn - [Ivona Bogoeska](https://www.linkedin.com/in/ivona-bogoeska-1358b145/)
